@@ -1,0 +1,40 @@
+	<div class="cart">
+		<div class="cart__header clearfix">
+			<p class="float-left">
+				<span class="icon-cart"></span>
+				<span class="primary-color">{{list.prodotti.length}} elementi </span>
+				nella tua lista
+			</p>
+			<a class="float-right" href="#_" role="button" ng-click="removeAllItems()"> X </a>
+		</div>
+
+		<ul class="cart__list container">
+		  <li ng-repeat="item in list.prodotti" class="row">
+		  	<div class="column column-20 column-center">
+			  	<img class="thumb" src="https://unsplash.it/55/55/?image={{$index}}">
+				</div>
+				<div class="column column-70 column-center">
+				    <p>
+						<span>{{item.descrizione}}</span><br>
+						<span>({{item.quantity}} confezioni)</span><br>
+						<span class="primary-color"><b>{{item.quantity}} x &euro;{{item.unitcost}}</b></span>
+					</p>
+				</div>
+				<div class="column column-10 column-center">
+					<a href="#" class="float-right" role="button" ng-click="removeItem($index)"> X </a>
+				</div>
+		  </li>
+		</ul>
+
+		<div class="cart__footer container">
+			<div class="row">
+				<div class="column column-60 column-center">
+					<span>Totale:</span>
+					<h3 class="primary-color">&euro;{{sumItemsCost()}}</h3>
+				</div>
+				<div class="column column-40 column-center">
+		    		<button class="button button-pill float-right" ng-click="openModal()">Aggiungi</button>
+				</div>
+			</div>
+		</div>
+	</div>

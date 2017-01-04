@@ -1,0 +1,14 @@
+<div class="ngdialog-message">
+	<form>
+			<label for="nameField">Description</label>
+			<input type="text" id="nameField" ng-model="input.descrizione">
+
+			<label for="quantityField">Quantity</label>
+			<input type="number" id="quantityField" ng-model="input.quantity">
+
+			<label for="costField">Cost</label>
+			<input type="number" id="costField" ng-model="input.unitcost">
+
+			<input class="button button-pill" type="submit" value="OK" ng-click="addItem(input)">
+	</form>
+</div>

@@ -1,0 +1,38 @@
+{
+  "name": "angular-cart",
+  "version": "1.0.0",
+  "description": "A cart basket app in angular",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefanoguglielmi/angular-cart.git"
+  },
+  "keywords": [
+    "angular",
+    "cart",
+    "basket"
+  ],
+  "author": "Stefano Guglielmi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stefanoguglielmi/angular-cart/issues"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.17.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "gulp-watch": "^4.3.10",
+    "jshint": "^2.9.4"
+  },
+  "homepage": "https://github.com/stefanoguglielmi/angular-cart#readme"
+}

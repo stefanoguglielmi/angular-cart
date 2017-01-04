@@ -1,0 +1,27 @@
+{
+  "name": "angular-cart",
+  "description": "A cart basket app in angular",
+  "main": "app.js",
+  "authors": [
+    "Stefano Guglielmi"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "angular",
+    "cart",
+    "basket"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.8",
+    "ng-dialog": "0.6.4"
+  }
+}

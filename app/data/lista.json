@@ -1,0 +1,19 @@
+{
+  "prodotti": [
+    {
+      "descrizione": "Panno per lavandino",
+      "quantity": 1,
+      "unitcost": 2.99
+    },
+    {
+      "descrizione": "Olio extra vergine",
+      "quantity": 1,
+      "unitcost": 9.99
+    },
+    {
+      "descrizione": "Detersivo per pavimenti",
+      "quantity": 1,
+      "unitcost": 4.99
+    }
+  ]
+}
