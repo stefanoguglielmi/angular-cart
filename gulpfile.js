@@ -2,19 +2,10 @@
 var gulp        = require('gulp'),
     gutil       = require('gulp-util'),
     watch       = require("gulp-watch"),
-    browserSync = require('browser-sync').create(),
-    autoprefixer = require("gulp-autoprefixer"),
-    uglify      = require("gulp-uglify"),
+    browserSync   = require('browser-sync').create(),
+    autoprefixer  = require("gulp-autoprefixer"),
     sass        = require("gulp-sass"),
     jshint      = require('gulp-jshint');
-
-var config = {
-    js: {
-        src: './app/js/app.js',       // Entry point
-        outputDir: './dist/js/',  // Directory to save bundle to
-        outputFile: 'app.js' // Name to use for bundle
-    },
-};
 
 gulp.task('fonts', function () {
     return gulp.src("app/fonts/**/*")
@@ -28,7 +19,8 @@ gulp.task('data', function () {
 
 gulp.task('scripts', function () {
     return gulp.src("app/js/**/*.js")
-        .pipe(gulp.dest("dist/js/"));
+      .pipe(jshint())
+      .pipe(gulp.dest("dist/js/"));
 });
 
 gulp.task('images', function () {
@@ -50,12 +42,12 @@ gulp.task('sass', function(){
       .pipe(gulp.dest('./dist/css/'));
 });
 
-gulp.task('server', function () {
+gulp.task('develop', function () {
     browserSync.init({
         injectChanges: true,
         logLevel: "debug",
         server: {
-            baseDir: "./"
+            baseDir: "./dist"
         }
     });
 
@@ -65,4 +57,4 @@ gulp.task('server', function () {
 });
 
 gulp.task('build', ['scripts', 'images', 'sass', 'html', 'data', 'fonts']);
-gulp.task('default', ['server']);
+gulp.task('default', ['develop']);

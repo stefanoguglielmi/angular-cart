@@ -1,10 +1,9 @@
 angular.
   module('cartApp').
-  // cart-basket
-  component('cartBasket', {
-    templateUrl: './js/cart-basket/cart-basket.template.html',
 
-    //
+  component('cartBasket', {
+    templateUrl: './js/components/cart-basket/cart-basket.template.html',
+
     controller: function CartBasketController($scope, $http, ngDialog) {
 
       $scope.list = [];
@@ -37,7 +36,7 @@ angular.
 
       $scope.openModal = function () {
           ngDialog.open({
-            template: './js/cart-basket/cart-basket.popup.html',
+            template: './js/components/cart-basket/cart-basket.popup.html',
             className: 'ngdialog-theme-default',
             scope: $scope
           });

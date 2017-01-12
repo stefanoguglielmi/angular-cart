@@ -19,6 +19,22 @@
 
 		li {
 			border-bottom:1px dotted #aaa;
+			transition: 800ms;
+
+			&.ng-enter.ng-enter-active,
+			&.ng-leave {
+				opacity: 1;
+				height: 120px;
+				overflow: hidden;
+			}
+
+			&.ng-leave.ng-leave-active,
+			&.ng-enter {
+				opacity: 0;
+				height: 0;
+				overflow: hidden;
+			}
+
 		}
 	}
 }
