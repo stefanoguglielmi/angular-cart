@@ -1,8 +1,1 @@
-// ngDialog
-var cartApp = angular.module('cartApp', ['ngDialog']);
-
-/*
-cartApp.controller('CartAppController', function CartAppController() {
-
-});
-*/
+var cartApp = angular.module('cartApp', ['ngAnimate','ngDialog']);
